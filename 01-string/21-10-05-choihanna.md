@@ -27,6 +27,7 @@ function solution(phone_book){
         let prefix = phone_book[i-1].length;
         /*  prefix의 length만큼만 비교  */
         /*  Array.prototype.slice(st, ed): 배열 복사 (실제 배열 변경 x) */
+        /*  String.prototype.slice(st, ed) */ 
         if (phone_book[i-1].slice(0, prefix) === phone_book[i].slice(0, prefix)) return false;
     }
     return true;
