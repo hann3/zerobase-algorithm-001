@@ -6,6 +6,7 @@ reference: https://programmers.co.kr/learn/courses/30/lessons/42578
 
 ```js
 function solution(clothes) {
+    'use strict'
     let answer = 1;
     let sH = new Map();
     for (let [val, key] of clothes) {
@@ -24,6 +25,7 @@ reference: https://programmers.co.kr/learn/courses/30/lessons/42576
 
 ```js
 function solution(participant, completion) {
+    'use strict'
     let answer = "";
     let sH = new Map();
 
