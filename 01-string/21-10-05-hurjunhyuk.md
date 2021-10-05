@@ -1,4 +1,6 @@
-# [프로그래머스 - 해시]위장
+# [프로그래머스 - 해시]
+
+## 위장
 
 reference: https://programmers.co.kr/learn/courses/30/lessons/42578
 
@@ -13,5 +15,30 @@ function solution(clothes) {
         answer *= (val + 1);
     }
     return answer - 1;
+}
+```
+
+## 완주하지 못한 선수
+
+reference: https://programmers.co.kr/learn/courses/30/lessons/42576
+
+```js
+function solution(participant, completion) {
+    let answer = "";
+    let sH = new Map();
+
+    for (let x of participant) {
+        sH.set(x, (sH.get(x) || 0) + 1);
+    }
+    for (let x of completion) {
+        sH.set(x, (sH.get(x) || 0) - 1);
+    }
+    for (let x of participant) {
+        if (1 === sH.get(x)) {
+            answer = x;
+            break;
+        }
+    }
+    return answer;
 }
 ```
