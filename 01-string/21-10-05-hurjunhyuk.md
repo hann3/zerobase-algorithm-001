@@ -9,6 +9,7 @@ function solution(clothes) {
     'use strict'
     let answer = 1;
     let sH = new Map();
+
     for (let [val, key] of clothes) {
         sH.set(key, (sH.get(key) || 0) + 1);
     }
@@ -25,20 +26,16 @@ reference: https://programmers.co.kr/learn/courses/30/lessons/42576
 
 ```js
 function solution(participant, completion) {
-    'use strict'
     let answer = "";
     let sH = new Map();
 
-    for (let x of participant) {
-        sH.set(x, (sH.get(x) || 0) + 1);
-    }
     for (let x of completion) {
         sH.set(x, (sH.get(x) || 0) - 1);
     }
     for (let x of participant) {
+        sH.set(x, (sH.get(x) || 0) + 1);
         if (1 === sH.get(x)) {
             answer = x;
-            break;
         }
     }
     return answer;
