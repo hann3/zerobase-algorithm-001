@@ -73,14 +73,16 @@ if (i !== n - 1 ) return false;
 
 <h3>- 문제</h3>
 
-"X"와 가장 먼 "O"의 인덱스를 선정하는 문제  
+>"X"와 가장 먼 "O"의 인덱스를 선정하는 문제  
 [ X O O X O O O X O ]
-{: .notice}
+
 
 > 직관적으로 봤을때 6번째 O가 답이다
 
 <h3>- 풀이</h3>
+
 새로운 배열을 선언하고 임시변수를 선언한다
+
 ```js
 const tempArr = new Array(입력된 배열의 길이).fill(초기값);
 let temp = 0;
