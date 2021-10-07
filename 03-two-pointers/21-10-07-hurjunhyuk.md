@@ -28,11 +28,12 @@
 	- gems 배열의 각 원소는 길이가 1 이상 10 이하인 알파벳 대문자로만 구성된 문자열입니다.
 
 ## 입출력 예시
-gems									result
-["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]	[3, 7]
-["AA", "AB", "AC", "AA", "AC"]						[1, 3]
-["XYZ", "XYZ", "XYZ"]							[1, 1]
-["ZZZ", "YYY", "NNNN", "YYY", "BBB"]					[1, 5]
+|gems|result|
+|:--|:----:|
+|["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]|[3, 7]|
+|["AA", "AB", "AC", "AA", "AC"]|[1, 3]|
+|["XYZ", "XYZ", "XYZ"]|[1, 1]|
+|["ZZZ", "YYY", "NNNN", "YYY", "BBB"]|[1, 5]|
 
 # 작성 코드 
 
