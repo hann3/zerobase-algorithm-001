@@ -1,6 +1,6 @@
 # 문제
 
-쉬운 문제 환영 
+[구명보트](https://programmers.co.kr/learn/courses/30/lessons/42885)
 
 ## 문제설명
 
