@@ -2,6 +2,8 @@
 
 ## 프로그래머스 - 보석쇼핑
 
+reference: https://programmers.co.kr/learn/courses/30/lessons/67258
+
 ## 문제설명
 개발자 출신으로 세계 최고의 갑부가 된 어피치는 스트레스를 받을 때면 이를 풀기 위해 오프라인 매장에 쇼핑을 하러 가곤 합니다.
 어피치는 쇼핑을 할 때면 매장 진열대의 특정 범위의 물건들을 모두 싹쓸이 구매하는 습관이 있습니다.
@@ -35,7 +37,47 @@ gems									result
 ["ZZZ", "YYY", "NNNN", "YYY", "BBB"]					[1, 5]
 
 # 작성 코드 
+```js
+function solution(gems) {
+    const gemset = new Set(gems);
+    const sH = new Map();
+    sH.set(gems[0], 1);
 
+    let left = 0;
+    let right = 0;
+    let answer = [0, gems.length - 1];
+
+    while (right < gems.length) {
+        let distance = right - left;
+        // 최소 한 개 이상의 gem을 모두 모으지 못했을 경우
+        // right를 증가시키면서 gem들을 해쉬에 넣는다
+        if (sH.size < gemset.size) {
+            right += 1;
+            sH.set(gems[right], (sH.get(gems[right]) || 0) + 1);
+        // 최소 한 개 이상의 gem을 모두 모았을 경우
+        // left를 증가시키면서 해쉬에서 gem들을 제거한다
+        // 다른 패턴을 찾기 위해서
+        } else {
+            // distance가 작으면 갱신!
+            if (distance < answer[1] - answer[0]) {
+                answer = [left, right];
+            }
+            // distance가 같을 경우 left값이 빠른쪽을 우선함
+            if (distance === answer[1] - answer[0]) {
+                if (left < answer[0]) {
+                    answer = [left, right];
+                }
+            }
+            sH.set(gems[left], sH.get(gems[left]) - 1);
+            if (sH.get(gems[left]) === 0) {
+                sH.delete(gems[left]);
+            }
+            left += 1;
+        }
+    }
+    return [answer[0] + 1, answer[1] + 1];
+}
+```
 
 
 
