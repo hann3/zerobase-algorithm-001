@@ -63,12 +63,6 @@ function solution(gems) {
             if (distance < answer[1] - answer[0]) {
                 answer = [left, right];
             }
-            // distance가 같을 경우 left값이 빠른쪽을 우선함
-            if (distance === answer[1] - answer[0]) {
-                if (left < answer[0]) {
-                    answer = [left, right];
-                }
-            }
             sH.set(gems[left], sH.get(gems[left]) - 1);
             if (sH.get(gems[left]) === 0) {
                 sH.delete(gems[left]);
