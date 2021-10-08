@@ -1,5 +1,5 @@
 # 슬라이딩 윈도우
-선형의 자료구조에서 가상의 windowrk 있다고 가정하고 가상의 window를 움직이며 window 안의 값을 다룬다
+선형의 자료구조에서 가상의 window가 있다고 가정하고 가상의 window를 움직이며 window 안의 값을 다룬다
 
 ![window](./imgs/window.png)
 
