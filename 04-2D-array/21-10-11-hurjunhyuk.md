@@ -50,7 +50,7 @@ for (let i = 1; i < n; i++) {
         if (sH.get(board[i][j]) < 4) {
             continue;
         }
-        for (let k = 1; board[i + k][j + k] != -1; k++) {
+        for (let k = 1; board[i + k][j] != -1 && board[i][j + k] != -1; k++) {
             // 왼위 꼭지점 기준으로 오위 꼭지점과 비교
             if (board[i][j] !== board[i][j + k]) {
                 continue;
