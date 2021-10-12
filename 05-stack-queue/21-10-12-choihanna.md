@@ -29,7 +29,7 @@
 
 # 작성 코드 
 
-1. 리팩토링 전 (과거에 작성)  
+## 1. 리팩토링 전 (과거에 작성)  
 
 ```javascript  
 
@@ -57,7 +57,7 @@ function solution(progresses, speeds) {
 ```
 
 
-개선한 점
+## 개선한 점
 - 주석의 추가
 - 변수명이 더욱 명확한 의미를 담도록 리네이밍 
 - 자료구조 큐의 활용
@@ -65,7 +65,7 @@ function solution(progresses, speeds) {
 
 
 
-2. 리팩토링 후 
+## 2. 리팩토링 후 
 
 ```javascript
 
