@@ -26,8 +26,9 @@ solution 함수를 완성하세요.
 |[93, 30, 55]|[1, 30, 5]|[2, 1]|
 |[95, 90, 99, 99, 80, 99]|[1, 1, 1, 1, 1, 1]|[1, 3, 2]|
 
-# 작성 코드
+## 작성 코드
 
+### 투포인터
 ```js
 function solution(progresses, speeds) {
     let answer = [];
@@ -47,6 +48,31 @@ function solution(progresses, speeds) {
             answer.push(1);
             left = right;
         }
+    }
+    return answer;
+}
+```
+
+### 스택
+```js
+function solution(progresses, speeds) {
+    let answer = [];
+    let remain = [];
+    let stack = [];
+
+    for (let i = 0; i < progresses.length; i++) {
+        remain.push(Math.ceil((100 - progresses[i]) / speeds[i]));
+    }
+    for (let i = 0; i < remain.length; i++) {
+        if (stack.length && remain[i] > stack[0]) {
+            answer.push(stack.length);
+            while (stack.length > 0)
+                stack.pop();
+        }
+        stack.push(remain[i]);
+    }
+    if (stack.length > 0) {
+        answer.push(stack.length);
     }
     return answer;
 }
