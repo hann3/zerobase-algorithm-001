@@ -41,7 +41,7 @@ function solution(events) {
         while(heap.size() && tmp<i) tmp=heap.get()
 	// 마감이 가장 빠른 기간이지만, 마감이 지난 것일 경우, 다시 빼줌(while)
         if(tmp>=i) answer++
-	// 기간에 부합할 경우에만 개수 증
+	// 기간에 부합할 경우에만 개수 증가
     }
     return answer
 };
