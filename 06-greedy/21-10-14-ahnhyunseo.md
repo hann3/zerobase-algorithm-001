@@ -1,0 +1,28 @@
+function solution(events) {
+    let answer=0
+    let heap=new minHeap()
+
+    events.sort((a,b)=>a[1]-b[1])
+    let end=events[events.length-1][1]
+    // 끝 부분 초기화
+
+    events.sort((a,b)=>b[0]-a[0])
+    let start=events[events.length-1][0]
+    // 시작 부분 초기화
+    // 시작 부분 초기화한대로 events 진행
+
+    for(let i=start;i<=end;i++){
+        // 시작부터 끝까지
+        while(events.length && events[events.length-1][0]===i){
+	// 현재 날짜에 마감하는 것 전부 넣어주기
+            heap.insert(events.pop()[1])
+        }
+        let tmp=heap.get()
+	// 기준값 하나 빼줌
+        while(heap.size() && tmp<i) tmp=heap.get()
+	// 최솟값이 기간 지난 것일 경우, 다시 빼줌
+        if(tmp>=i) answer++
+	// 기간에 부합할 경우에만 개수 증
+    }
+    return answer
+};
