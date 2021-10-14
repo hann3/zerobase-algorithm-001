@@ -29,18 +29,25 @@ n개의 음이 아닌 정수가 있습니다. 이 수를 적절히 더하거나 
 function solution(nums, target) {
     let answer = 0;
     let n = nums.length;
-
+    
     function DFS(L, sum) {
+        // nums의 갯수만큼 깊이우선탐색을 하고
         if (L === n) {
+            // -, +된 값의 합이 주어진 target과 일치할 경우
+            // answer를 증가시켜준다.
             if (sum === target) {
                 answer++;
             }
+            // return이 없어도 동작의 변화는 없음
             return;
         } else {
+            // 왼쪽 노드는 - 연산을 해주면서 깊이우선탐색 진행
             DFS(L + 1, sum - nums[L]);
-            DFS(L + 1, sum + nums[L]);
+            // 오른쪽 노드는 + 연산을 해주면서 깊이우선탐색을 진행
+            DFS(L + 1, sum - nums[L]);+ 연산을 해주면서 
         }
     }
+    // 레벨0, 합계0으로부터 깊이우선탐색 시작
     DFS(0, 0);
     return answer;
 }
