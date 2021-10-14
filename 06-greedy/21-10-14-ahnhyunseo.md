@@ -33,13 +33,13 @@ function solution(events) {
     for(let i=start;i<=end;i++){
         // 시작부터 끝까지
         while(events.length && events[events.length-1][0]===i){
-	// 현재 날짜에 마감하는 것 전부 넣어주기
+	// 현재 날짜에 시작하는 기간을 전부 넣어줌
             heap.insert(events.pop()[1])
         }
         let tmp=heap.get()
 	// 기준값 하나 빼줌
         while(heap.size() && tmp<i) tmp=heap.get()
-	// 최솟값이 기간 지난 것일 경우, 다시 빼줌
+	// 마감이 가장 빠른 기간이지만, 마감이 지난 것일 경우, 다시 빼줌(while)
         if(tmp>=i) answer++
 	// 기간에 부합할 경우에만 개수 증
     }
