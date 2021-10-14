@@ -1,3 +1,22 @@
+## [leetcode 1353](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
+
+### 문제 설명
+특정 기간 내에 최대한 많은 일정을 진행
+
+### Input
+events = [[1,2],[2,3],[3,4]]
+
+### Output: 3
+
+### Explanation:
+You can attend all the three events.
+One way to attend them all is as shown.
+Attend the first event on day 1.
+Attend the second event on day 2.
+Attend the third event on day 3.
+
+
+```javascript
 function solution(events) {
     let answer=0
     let heap=new minHeap()
@@ -26,3 +45,4 @@ function solution(events) {
     }
     return answer
 };
+```
