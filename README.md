@@ -28,7 +28,7 @@
 | 21-10-12(화) |<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|
 | 21-10-13(수) |<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|
 | 21-10-14(목) |<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|
-| 21-10-15(금) |<ul><li>- [x] 문제풀기</li><li>- [ ] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [ ] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [ ] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [ ] 리뷰</li></ul>|
+| 21-10-15(금) |<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|<ul><li>- [x] 문제풀기</li><li>- [x] 리뷰</li></ul>|
 
 
 
