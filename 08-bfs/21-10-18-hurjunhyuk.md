@@ -85,7 +85,6 @@ var combinationSum = function (candidates, target) {
 	function DFS(tmp, s) {
 		if (sumOfElements(tmp) > target) return;
 		if (sumOfElements(tmp) === target) {
-			tmp.sort((a, b) => a - b);
 			answer.push(tmp.slice());
 			return;
 		}
