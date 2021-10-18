@@ -44,7 +44,7 @@ function solution(nums, target) {
             // 왼쪽 노드는 - 연산을 해주면서 깊이우선탐색 진행
             DFS(L + 1, sum - nums[L]);
             // 오른쪽 노드는 + 연산을 해주면서 깊이우선탐색을 진행
-            DFS(L + 1, sum - nums[L]);+ 연산을 해주면서 
+            DFS(L + 1, sum + nums[L]);
         }
     }
     // 레벨0, 합계0으로부터 깊이우선탐색 시작
