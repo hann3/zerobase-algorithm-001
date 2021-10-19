@@ -49,7 +49,8 @@ function solution(){
     let dy = new Array(n).fill(0) // 높이 배열
     let block = input;
 
-    for(let i = 0; i < n; i++){
+    // 인덱스 번호를 정렬 전 미리 저장해야 함
+    for(let i=0; i<n; i++){
         block[i].push(i+1);
     }
 
@@ -63,6 +64,7 @@ function solution(){
                 max = dy[j];
             }
         }
+            // 위 조건문을 거치지 않았을 경우 자기 자신의 높이 
             dy[i] = max + block[i][1];
     }
     let maxHeight = Math.max(...dy);
